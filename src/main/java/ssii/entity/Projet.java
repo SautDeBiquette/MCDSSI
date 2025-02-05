@@ -20,7 +20,7 @@ public class Projet {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer matricule;
+    private Integer code;
 
     @NotEmpty
     @NotBlank
@@ -32,9 +32,6 @@ public class Projet {
     @NonNull // lombok
     private LocalDate debut;
 
-    @NotEmpty
-    @NotBlank
-    @NonNull // lombok
     private LocalDate fin;
 
     @OneToMany (mappedBy = "projet")

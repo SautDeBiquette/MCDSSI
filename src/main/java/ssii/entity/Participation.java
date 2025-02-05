@@ -19,7 +19,7 @@ public class Participation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer matricule;
+    private Integer id;
 
     @NotEmpty
     @NotBlank
