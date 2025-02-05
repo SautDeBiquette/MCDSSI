@@ -7,6 +7,8 @@ import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -20,16 +22,24 @@ public class Projet {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer matricule;
 
+    @NotEmpty
     @NotBlank
     @NonNull // lombok
     private String nom;
 
+    @NotEmpty
     @NotBlank
     @NonNull // lombok
     private LocalDate debut;
 
+    @NotEmpty
     @NotBlank
     @NonNull // lombok
     private LocalDate fin;
 
+    @ManyToMany
+    private List<Personne> personnes = new ArrayList<>();
+
+    @OneToMany (mappedBy = "projet")
+    private List<Participation> participations = new ArrayList<>();
 }
