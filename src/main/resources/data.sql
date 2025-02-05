@@ -4,6 +4,9 @@ INSERT INTO PERSONNE(nom,prenom,poste) VALUES
     ('Elyes', 'Lamine','directeur'),
     ('Jean-Marie', 'Pécatte','prof');
 
+UPDATE PERSONNE
+    SET SUPERIEUR_MATRICULE = 2
+WHERE MATRICULE in (1,3);
 
 INSERT INTO PROJET(nom,debut) VALUES
                                            ('MCDSSI', '2025-02-05'),
