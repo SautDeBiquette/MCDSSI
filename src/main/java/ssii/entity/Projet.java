@@ -37,9 +37,6 @@ public class Projet {
     @NonNull // lombok
     private LocalDate fin;
 
-    @ManyToMany
-    private List<Personne> personnes = new ArrayList<>();
-
     @OneToMany (mappedBy = "projet")
     private List<Participation> participations = new ArrayList<>();
 }

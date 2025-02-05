@@ -37,9 +37,6 @@ public class Personne {
     @NonNull // lombok
     private String poste;
 
-    @ManyToMany
-    private List<Projet> projets;
-
     @ManyToOne
     private Personne superieur;
 
